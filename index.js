@@ -15,9 +15,6 @@ app.use(bodyParser.urlencoded({ extended: true }));
 
 const render = util.promisify(carbone.render);
 
-// Flagging default formatters to remove custom ones later
-_.forEach(carbone.formatters, formatter => formatter.$isDefault = true);
-
 app.get('/', (req, res) => {
   res.sendFile(path.resolve(`./test.html`));
 });
@@ -44,9 +41,6 @@ app.post('/render', upload.single(`template`), async (req, res) => {
   try {
     formatters = telejson.parse(req.body.formatters);
   } catch (e) {}
-
-  // Removing previous custom formatters before adding new ones
-  carbone.formatters = _.filter(carbone.formatters, formatter => formatter.$isDefault === true);
 
   carbone.addFormatters(formatters);
 
