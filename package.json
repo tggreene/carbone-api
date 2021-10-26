@@ -1,20 +1,20 @@
 {
-  "name": "carbone-docker",
-  "version": "0.1.0",
-  "description": "All what you need to build a standalone carbone.io Docker image",
+  "name": "carbone-api",
+  "version": "0.2.0",
+  "description": "All you need to build a standalone carbone.io Docker image",
   "main": "index.js",
-  "author": "Florian Bezagu <florian@bezagu.com>",
+  "author": "Tim Greene <tim.g.greene@gmail.com>",
   "license": "MIT",
   "dependencies": {
-    "body-parser": "^1.18.3",
+    "body-parser": "1.19.0",
     "carbone": "3.2.3",
-    "express": "^4.16.4",
-    "fs-extra": "^7.0.1",
-    "lodash": "^4.17.15",
-    "multer": "^1.4.1",
-    "telejson": "^3.0.3"
+    "express": "4.17.1",
+    "fs-extra": "10.0.0",
+    "lodash": "4.17.21",
+    "multer": "1.4.3",
+    "telejson": "5.3.3"
   },
   "devDependencies": {
-    "forever": "^1.0.0"
+    "forever": "4.0.1"
   }
 }
