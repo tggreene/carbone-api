@@ -16,4 +16,7 @@ RUN yarn
 COPY fonts /usr/local/share/fonts
 RUN fc-cache -f
 
+ENV CARBONE_PORT=80
+EXPOSE 80
+
 ENTRYPOINT ["node", "index"]

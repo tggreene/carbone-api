@@ -1,10 +1,26 @@
-# Carbone Docker
+# Carbone API
+
 Embedded Carbone in a Docker image with simple REST API.
 
-## How to consume exposed API ?
-The simpliest way to use this image is to use `node` and install [`carbone-connect` package](https://npmjs.org/carbone-connect).
+## Try it out
+
+Build the image
+
+    docker build -t carbone-api .
+
+Run the image
+
+    docker run --rm -it --init -p 3030:80 carbone-api
+
+Run a test curl command
+
+    cd test
+    ./test.sh
+
+Inspect the generated sample.pdf
 
 ## From carbone.io website
+
 _Fast, Simple and Powerful report generator in any format PDF, DOCX, XLSX, ODT, PPTX, ODS [, ...]_
 
 _... using your JSON data as input._

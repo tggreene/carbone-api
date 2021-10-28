@@ -16,7 +16,7 @@ app.use(bodyParser.urlencoded({ extended: true }));
 const render = util.promisify(carbone.render);
 
 app.get('/', (req, res) => {
-  res.sendFile(path.resolve(`./test.html`));
+  res.status(204).send();
 });
 
 app.post('/render', upload.single(`template`), async (req, res) => {
@@ -63,4 +63,4 @@ app.post('/render', upload.single(`template`), async (req, res) => {
   return res.send(report);
 });
 
-app.listen(port, () => console.log(`Carbone wrapper listenning on port ${port}!`));
+app.listen(port, () => console.log(`Carbone wrapper listening on port ${port}!`));
