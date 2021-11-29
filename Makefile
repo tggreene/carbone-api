@@ -1,8 +1,15 @@
 TAG=tggreene/carbone-api
 ESCAPED_TAG=$(subst /,\/,$(TAG))
-CARBONE_VERSION=3.4.1
-API_VERSION=1
+API_VERSION=$(shell jq -r '.version' package.json)
+CARBONE_VERSION=$(shell jq -r '.dependencies["@tggreene/carbone"]' package.json)
 VERSION := $(CARBONE_VERSION)-$(API_VERSION)
+
+audit:
+	@echo "\$$(TAG) =" '$(TAG)'
+	@echo "\$$(ESCAPED_TAG) =" '$(ESCAPED_TAG)'
+	@echo "\$$(CARBONE_VERSION) =" '$(CARBONE_VERSION)'
+	@echo "\$$(API_VERSION) =" '$(API_VERSION)'
+	@echo "\$$(VERSION) =" '$(VERSION)'
 
 publish:
 	docker build -t $(TAG):$(VERSION) .
