@@ -2,12 +2,12 @@ const path = require(`path`);
 const fs = require(`fs-extra`);
 const _ = require(`lodash`);
 const util = require(`util`);
-const carbone = require(`carbone`);
+const carbone = require(`@tggreene/carbone`);
 const telejson = require(`telejson`);
 const express = require(`express`);
 const bodyParser = require(`body-parser`);
 const app = express();
-const upload = require(`multer`)({ dest: `/tmp-reports/` });
+const upload = require(`multer`)({ dest: `/tmp/reports/` });
 const port = process.env.CARBONE_PORT || 3030;
 
 app.use(bodyParser.json());
