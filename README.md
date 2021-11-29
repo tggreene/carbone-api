@@ -2,6 +2,10 @@
 
 Embedded Carbone in a Docker image with simple REST API.
 
+## Image from Docker Hub
+
+    docker pull tggreene/carbone-api:3.4.1-1
+
 ## Try it out
 
 Build the image
