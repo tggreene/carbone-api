@@ -18,9 +18,12 @@ update-readme:
 	git add README.md
 	git commit -m 'Update readme version $(TAG):$(VERSION)'
 
+docker-release:
+	docker build -t $(TAG):$(VERSION) .
+	docker push $(TAG):$(VERSION)
+
 release:
 	npm version minor
 	$(MAKE) update-readme
-	docker build -t $(TAG):$(VERSION) .
-	docker push $(TAG):$(VERSION)
+	$(MAKE) docker-release
 	git push --follow-tags origin master
