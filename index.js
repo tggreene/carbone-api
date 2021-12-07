@@ -6,9 +6,16 @@ const carbone = require(`@tggreene/carbone`);
 const telejson = require(`telejson`);
 const express = require(`express`);
 const bodyParser = require(`body-parser`);
-const app = express();
-const upload = require(`multer`)({ dest: `/tmp/reports/` });
+const multer = require(`multer`);
 const port = process.env.CARBONE_PORT || 3030;
+
+const app = express();
+const upload = multer({
+  dest: `/tmp/reports/`,
+  limits: {
+    fieldSize: 1024 * 1024 * 20
+  }
+});
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
