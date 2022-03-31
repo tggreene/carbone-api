@@ -2,10 +2,10 @@
 # yarn lockfile v1
 
 
-"@tggreene/carbone@3.4.1":
-  version "3.4.1"
-  resolved "https://registry.yarnpkg.com/@tggreene/carbone/-/carbone-3.4.1.tgz#36d33fed8b2388ebd0bad146ad03548637e6b7dd"
-  integrity sha512-gBVvGphgO9opbGDkw/u7d3jG34QjgYUW8au1DgZaB+M8cgNPSo/54g4itnd54MK/OfMTJDsjvkyGFPsFvVLfsQ==
+"@tggreene/carbone@3.4.2":
+  version "3.4.2"
+  resolved "https://registry.yarnpkg.com/@tggreene/carbone/-/carbone-3.4.2.tgz#223fcf80edfcb6a73dcc386acf48297d225a45aa"
+  integrity sha512-UEQ4MwGqiMlwzTEhOJrma1ByoshNVgakYhIojD/Q7hoIgof530Nf7gvEPYZPmw79DETgNqXRCIf2u7Lj4TtgNQ==
   dependencies:
     dayjs "=1.10.7"
     debug "=4.3.2"
@@ -453,9 +453,9 @@ min-document@^2.19.0:
     dom-walk "^0.1.0"
 
 minimist@^1.2.5:
-  version "1.2.5"
-  resolved "https://registry.npmjs.org/minimist/-/minimist-1.2.5.tgz"
-  integrity sha512-FM9nNUYrRBAELZQT3xeZQ7fmMOBg6nWNmJKTcgsJeaLstP/UODVpGsr5OhXhhXg6f+qtJ8uiZ+PUxkDWcgIXLw==
+  version "1.2.6"
+  resolved "https://registry.yarnpkg.com/minimist/-/minimist-1.2.6.tgz#8637a5b759ea0d6e98702cfb3a9283323c93af44"
+  integrity sha512-Jsjnk4bw3YJqYzbdyBiNsPWHPfO++UGG749Cxs6peCu5Xg4nrena6OVxOYxrQTqww0Jmwt+Ref8rggumkTLz9Q==
 
 mkdirp@^0.5.4:
   version "0.5.5"
